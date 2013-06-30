@@ -1,0 +1,56 @@
+<h1 class="text-center">Visiting EUROPE</h1>
+
+<%= render partial: "shared/menu"%>
+
+<div class="row">
+  <div class="span9">
+    <table>
+
+      <tr>
+        <th>Name</th>
+        <th>Content</th>
+        <th>Price</th>
+      </tr>
+
+    <% @cities.each do |city| %>
+      <tr>
+        <td><%= city.name %></td>
+        <td><%= city.content %></td>
+        <td><%= city.price %> €</td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <%= link_to 'Show', city %>
+          <%= link_to 'Edit', edit_city_path(city) %>
+          <%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <hr>
+        </td>
+      </tr>
+    <% end %>
+
+    </table>
+
+    <%= link_to 'New City', new_city_path %>
+  </div>
+
+  <div class="span3">
+      <h4>Special Offers</h4>
+      <p>
+        Explore the world! TripAdvisor has reviews and information on over 400,000 locations, including:
+          Travel Destinations
+          Geneva travel
+          Pas de la Casa hotels
+          Hotels
+          Hotel Regal
+          Britannia Country Hotel
+          Hotel IN in Trebinje
+          Minshuku Kiyomiso in Iriomote-jima
+          Gessler Hotel Francuski in Krakow
+          VIP Diplomatico Hotel in Lisbon
+      </p>
+  </div>
+
+
+
+
+</div>

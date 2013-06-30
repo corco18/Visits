@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @city.name %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @city.content %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @city.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_city_path(@city) %> |
+<%= link_to 'Back', cities_path %>
